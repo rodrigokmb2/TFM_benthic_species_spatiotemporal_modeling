@@ -1,74 +1,78 @@
-Scripts used in the Master's Thesis analysis workflow.
+DESCRIPCIÓN DE LOS SCRIPTS
 
-SCRIPTS DESCRIPTION
-
-This directory contains the R scripts used in the analyses presented in the Master's Thesis:
+Este directorio contiene los scripts desarrollados en R utilizados en los análisis
+presentados en el Trabajo Fin de Máster:
 
 "Modelización espaciotemporal de especies bentónicas en ecosistemas costeros de Galicia"
 
-The scripts are organised following the logical sequence of the analysis workflow.
+Los scripts están organizados siguiendo la secuencia lógica del flujo de trabajo
+analítico, desde la preparación de los datos hasta la selección y ajuste de los
+modelos estadísticos.
 
 ------------------------------------------------------------
 00_preparacion_datos.R
 ------------------------------------------------------------
-Purpose:
-- Import raw biological, sedimentary and haul-level data.
-- Perform data cleaning, validation and formatting.
-- Generate derived variables (e.g. density per km²).
-Outputs:
-- Cleaned and harmonised datasets used in subsequent analyses.
+Objetivo:
+- Importar los datos biológicos, sedimentarios y de lances de arrastre.
+- Realizar procesos de depuración, validación y formateo de los datos.
+- Generar variables derivadas, como la densidad estandarizada (individuos·km⁻²).
+Salidas:
+- Conjuntos de datos depurados y armonizados utilizados en los análisis posteriores.
 
 ------------------------------------------------------------
 01_analisis_comunidad.R
 ------------------------------------------------------------
-Purpose:
-- Characterise benthic community structure.
-- Compute alpha diversity indices (Shannon, Simpson, richness, Pielou).
-- Perform multivariate analyses (nMDS, SIMPER).
-Outputs:
-- Community-level summary tables and figures.
+Objetivo:
+- Caracterizar la estructura de la comunidad bentónica.
+- Calcular índices de diversidad alfa (Shannon, Simpson, riqueza y equitatividad de Pielou).
+- Realizar análisis multivariantes (nMDS, SIMPER).
+Salidas:
+- Tablas resumen y figuras a nivel de comunidad.
 
 ------------------------------------------------------------
 02_exploracion_covariables.R
 ------------------------------------------------------------
-Purpose:
-- Explore relationships among environmental covariates.
-- Assess collinearity and variable distributions.
-- Select candidate predictors for modelling.
-Outputs:
-- Correlation matrices and exploratory plots.
+Objetivo:
+- Explorar las relaciones entre las covariables ambientales.
+- Evaluar la colinealidad y la distribución de las variables predictoras.
+- Seleccionar covariables candidatas para la modelización.
+Salidas:
+- Matrices de correlación y gráficos exploratorios.
 
 ------------------------------------------------------------
 03_preparacion_dataset_modelos.R
 ------------------------------------------------------------
-Purpose:
-- Merge biological, environmental and spatial data.
-- Prepare final species-specific modelling datasets.
-Outputs:
-- Model-ready datasets.
+Objetivo:
+- Integrar la información biológica, ambiental y espacial.
+- Preparar los conjuntos de datos finales específicos por especie para la modelización.
+Salidas:
+- Conjuntos de datos listos para la aplicación de modelos de distribución de especies.
 
 ------------------------------------------------------------
 04_seleccion_modelos.R
 ------------------------------------------------------------
-Purpose:
-- Fit alternative species distribution models (GLM and GAM).
-- Compare models using AIC, BIC and explained deviance.
-Outputs:
-- Model comparison tables and selected final models.
+Objetivo:
+- Ajustar modelos alternativos de distribución de especies (GLM y GAM).
+- Comparar modelos mediante criterios de información (AIC, BIC) y devianza explicada.
+Salidas:
+- Tablas de comparación de modelos y selección de los modelos finales.
 
 ------------------------------------------------------------
 05_tuning_gam_tweedie.R
 ------------------------------------------------------------
-Purpose:
-- Fine-tune GAM Tweedie models.
-- Evaluate sensitivity to smoothing parameters and power estimation.
-Outputs:
-- Final model diagnostics and effect plots.
+Objetivo:
+- Ajustar y refinar los modelos GAM con distribución Tweedie.
+- Evaluar la sensibilidad de los modelos a los parámetros de suavizado y a la estimación
+  del parámetro de potencia.
+Salidas:
+- Diagnósticos finales de los modelos y gráficos de efectos parciales.
 
 ------------------------------------------------------------
-GENERAL NOTES
+NOTAS GENERALES
 ------------------------------------------------------------
 
-- Scripts are intended to be executed sequentially.
-- Input data are not publicly available; see `data/README_data.txt`.
-- All scripts include internal text describing inputs and outputs.
+- Los scripts están diseñados para ejecutarse de forma secuencial.
+- Los datos de entrada no son de acceso público; véase `data/README_data.txt` para
+  la descripción de su estructura y variables.
+- Todos los scripts incluyen documentación interna que describe sus entradas,
+  salidas y objetivos analíticos.
