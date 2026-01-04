@@ -1,91 +1,115 @@
-DATA AVAILABILITY AND DESCRIPTION
+DISPONIBILIDAD Y DESCRIPCIÓN DE LOS DATOS
 
-The data used in this study are not publicly available due to ongoing and planned scientific publications by the research groups and investigators responsible for data acquisition and curation. Access to the raw datasets is therefore restricted at this stage.
+Los datos utilizados en este estudio no son de acceso público, ya que forman parte de
+publicaciones científicas en curso y planificadas por los grupos de investigación e
+investigadores responsables de su adquisición y curación. En consecuencia, el acceso
+a los conjuntos de datos originales se encuentra restringido en esta fase.
 
-This directory describes the structure, content, and role of the datasets used in the analyses presented in the Master's Thesis:
+Este directorio describe la estructura, el contenido y el papel de los conjuntos de
+datos empleados en los análisis presentados en el Trabajo Fin de Máster:
 
 "Modelización espaciotemporal de especies bentónicas en ecosistemas costeros de Galicia"
 
-The datasets were generated within scientific bottom-trawl surveys conducted in the Gulf of Artábro (NW Iberian Peninsula) and are part of institutional research projects coordinated by the Instituto Español de Oceanografía (IEO–CSIC).
+Los datos fueron generados en el marco de campañas científicas de arrastre de fondo
+realizadas en el Golfo Ártabro (noroeste de la Península Ibérica) y forman parte de
+proyectos de investigación institucionales coordinados por el Instituto Español de
+Oceanografía (IEO–CSIC), como el proyecto BIGA (Biodiversidad del Golfo Ártabro).
 
 ----------------------------------------------------------------------
 1. datos_lances.csv
 ----------------------------------------------------------------------
 
-Description:
-Metadata associated with each bottom-trawl haul (lance). This table provides spatial, temporal, and operational information used to define the sampling effort and to compute species densities.
+Descripción:
+Metadatos asociados a cada lance de arrastre de fondo. Esta tabla proporciona
+información espacial, temporal y operativa utilizada para definir el esfuerzo de
+muestreo y para el cálculo de densidades estandarizadas de las especies.
 
-Main variables:
-- lance: Unique identifier of the trawl haul.
-- estacion: Sampling station identifier.
-- mes: Month of sampling.
-- lat_firmes / lon_firmes: Latitude and longitude at the start of the haul.
-- lat_virado / long_virado: Latitude and longitude at the end of the haul.
-- area_arrastrada: Estimated swept area (km²).
-- zona: Geographic sector (e.g., A Coruña, Ares–Betanzos, Orzán–Riazor).
-- exposicion: Binary variable describing sediment exposure (low / high).
-- sustrato: Dominant substrate category.
-- profundidad: Bottom depth (m).
-- estacion.1: Seasonal classification (warm / cold season).
+Variables principales:
+- lance: Identificador único del lance de arrastre.
+- estacion: Identificador de la estación de muestreo.
+- mes: Mes de realización del muestreo.
+- lat_firmes / lon_firmes: Latitud y longitud al inicio del lance.
+- lat_virado / long_virado: Latitud y longitud al final del lance.
+- area_arrastrada: Área barrida estimada (km²).
+- zona: Sector geográfico (p. ej., A Coruña, Ares–Betanzos, Orzán–Riazor).
+- exposicion: Variable binaria que describe la exposición del sedimento (baja / alta).
+- sustrato: Categoría dominante del sustrato.
+- profundidad: Profundidad del fondo (m).
+- estacion.1: Clasificación estacional (estación cálida / fría).
 
-Role in analysis:
-Used to define the spatial and temporal structure of the sampling design and to calculate standardized species densities (individuals·km⁻²).
+Papel en el análisis:
+Utilizado para definir la estructura espacial y temporal del diseño de muestreo y para
+el cálculo de densidades estandarizadas (individuos·km⁻²).
 
 ----------------------------------------------------------------------
 2. datos_especies.csv
 ----------------------------------------------------------------------
 
-Description:
-Species-level biological data collected for each trawl haul. This table contains abundance information for benthic taxa captured during the surveys.
+Descripción:
+Datos biológicos a nivel de especie recopilados para cada lance de arrastre. Esta tabla
+contiene información sobre la abundancia de los taxones bentónicos capturados durante
+las campañas.
 
-Main variables:
-- estacion: Sampling station identifier.
-- lance: Trawl haul identifier.
-- cod: Taxonomic code.
-- comercial: Indicator of commercial interest.
-- nombre_comun: Common name (Spanish).
-- nombre_Galicia: Common name (Galician).
-- FAO_code: FAO species code.
-- especie: Scientific name.
-- numero_ejemplares: Number of individuals captured in the haul.
+Variables principales:
+- estacion: Identificador de la estación de muestreo.
+- lance: Identificador del lance de arrastre.
+- cod: Código taxonómico.
+- comercial: Indicador de interés comercial.
+- nombre_comun: Nombre común en castellano.
+- nombre_Galicia: Nombre común en gallego.
+- FAO_code: Código FAO de la especie.
+- especie: Nombre científico.
+- numero_ejemplares: Número de individuos capturados en el lance.
 
-Role in analysis:
-Used to characterise community composition, calculate diversity indices, and derive species-specific density metrics for subsequent modelling.
+Papel en el análisis:
+Utilizado para caracterizar la composición de la comunidad bentónica, calcular índices
+de diversidad y derivar métricas de densidad específicas por especie para su posterior
+modelización.
 
 ----------------------------------------------------------------------
 3. datos_sedimento.csv
 ----------------------------------------------------------------------
 
-Description:
-Sedimentological and environmental characterisation of the sampling stations. This table contains physical and granulometric properties of the seabed.
+Descripción:
+Caracterización sedimentológica y ambiental de las estaciones de muestreo. Esta tabla
+incluye propiedades físicas y granulométricas del fondo marino.
 
-Main variables:
-- estacion: Sampling station identifier.
-- zona: Geographic sector.
-- profundidad: Bottom depth (m).
-- Posicion_Sed: Sediment position within the station.
-- pctMO: Percentage of organic matter.
-- pctArenaGruesa: Percentage of coarse sand.
-- pctArenaFina: Percentage of fine sand.
-- pctLodo: Percentage of mud.
-- Q50µm: Median grain size (micrometres).
-- Q50phi: Median grain size (phi units).
-- So: Sorting coefficient.
+Variables principales:
+- estacion: Identificador de la estación de muestreo.
+- zona: Sector geográfico.
+- profundidad: Profundidad del fondo (m).
+- Posicion_Sed: Posición de la muestra de sedimento dentro de la estación.
+- pctMO: Porcentaje de materia orgánica.
+- pctArenaGruesa: Porcentaje de arena gruesa.
+- pctArenaFina: Porcentaje de arena fina.
+- pctLodo: Porcentaje de lodo.
+- Q50µm: Tamaño medio del grano (micrómetros).
+- Q50phi: Tamaño medio del grano (unidades phi).
+- So: Coeficiente de selección (sorting).
 
-Role in analysis:
-Used as environmental predictors in species distribution models and to explore sediment–community relationships.
-
-----------------------------------------------------------------------
-REPRODUCIBILITY NOTE
-----------------------------------------------------------------------
-
-Although the original datasets cannot be redistributed, all R scripts provided in the repository are fully documented and structured to allow reproducibility using equivalent datasets with the same variable structure. Variable names and expected formats correspond exactly to those described above.
-
-For access to the original data, interested researchers should contact the corresponding research groups at IEO–CSIC, subject to data availability and institutional policies.
+Papel en el análisis:
+Utilizado como conjunto de predictores ambientales en los modelos de distribución de
+especies y para explorar las relaciones entre el sedimento y la estructura de la
+comunidad bentónica.
 
 ----------------------------------------------------------------------
-AUTHOR
+NOTA SOBRE REPRODUCIBILIDAD
 ----------------------------------------------------------------------
 
-Rodrigo Alba Salgueiro
-Master's Thesis – MSc in Bioinformatics and Biostatistics
+Aunque los conjuntos de datos originales no pueden ser redistribuidos, todos los
+scripts en R proporcionados en este repositorio están documentados y estructurados de
+forma que permiten reproducir el flujo completo de análisis utilizando datos
+equivalentes con la misma estructura y nomenclatura de variables. Los nombres de las
+variables y los formatos esperados se corresponden exactamente con los descritos en
+este documento.
+
+Para solicitar acceso a los datos originales, los investigadores interesados deberán
+contactar con los grupos de investigación correspondientes del IEO–CSIC, de acuerdo
+con las políticas institucionales y la disponibilidad de los datos.
+
+----------------------------------------------------------------------
+AUTOR
+----------------------------------------------------------------------
+
+Rodrigo Alba Salgueiro  
+Trabajo Fin de Máster – Máster Universitario en Bioinformática y Bioestadística
