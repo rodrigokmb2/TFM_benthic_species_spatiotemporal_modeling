@@ -75,4 +75,4 @@ NOTAS GENERALES
 - Los datos de entrada no son de acceso público; véase `data/README_data.txt` para
   la descripción de su estructura y variables.
 - Todos los scripts incluyen documentación interna que describe sus entradas,
-  salidas y objetivos analíticos.
+  salidas y procedimientos analíticos.
