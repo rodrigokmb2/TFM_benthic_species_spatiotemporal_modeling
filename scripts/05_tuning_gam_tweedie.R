@@ -1,5 +1,5 @@
 # ======================================================================
-# Script 05: Ajuste del parámetro k y de la complejidad de smooths en GAM-Tweedie
+# Script 05: Ajuste del parámetro k y de la complejidad de smooths en GAM-Tweedie p estimado
 # Proyecto: Modelización espaciotemporal de especies bentónicas en ecosistemas costeros de Galicia
 # Autor: Rodrigo Alba Salgueiro
 # Fecha: 2026-01-01
