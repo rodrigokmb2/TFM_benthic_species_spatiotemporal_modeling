@@ -53,7 +53,7 @@ Salidas:
 ------------------------------------------------------------
 Objetivo:
 - Ajustar modelos alternativos de distribución de especies (GLM y GAM).
-- Comparar modelos mediante criterios de información (AIC, BIC) y devianza explicada.
+- Comparar modelos mediante criterios de información (AIC, BIC) y desviación explicada.
 Salidas:
 - Tablas de comparación de modelos y selección de los modelos finales.
 
@@ -62,8 +62,8 @@ Salidas:
 ------------------------------------------------------------
 Objetivo:
 - Ajustar y refinar los modelos GAM con distribución Tweedie.
-- Evaluar la sensibilidad de los modelos a los parámetros de suavizado y a la estimación
-  del parámetro de potencia.
+- Evaluar la sensibilidad de los modelos a los parámetros de suavizado (k) y a la estimación
+  del parámetro de potencia (p).
 Salidas:
 - Diagnósticos finales de los modelos y gráficos de efectos parciales.
 
