@@ -57,9 +57,9 @@ Objetivo:
 ------------------------------------------------------------
 Objetivo:
 - Ajustar y refinar los modelos GAM con distribución Tweedie.
-- Evaluar la sensibilidad de los modelos a los parámetros de suavizado (k) y a la estimación
-  del parámetro de potencia (p).
-  Salidas: Diagnósticos finales de los modelos y gráficos de efectos parciales.
+- Análisis univariante de la sensibilidad de los modelos a los parámetros de suavizado (k).
+- Análisis del modelo a la estimación del parámetro de potencia (p).
+- Salidas: Diagnósticos finales de los modelos y gráficos de efectos parciales.
 
 ------------------------------------------------------------
 NOTAS GENERALES
