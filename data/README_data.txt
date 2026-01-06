@@ -31,11 +31,11 @@ Variables principales:
 - lat_firmes / lon_firmes: Latitud y longitud al inicio del lance.
 - lat_virado / long_virado: Latitud y longitud al final del lance.
 - area_arrastrada: Área barrida estimada (km²).
-- zona: Sector geográfico (p. ej., A Coruña, Ares–Betanzos, Orzán–Riazor).
-- exposicion: Variable binaria que describe la exposición del sedimento (baja / alta).
-- sustrato: Categoría dominante del sustrato.
+- zona: Sector geográfico (A Coruña, Ares–Betanzos, Orzán–Riazor).
+- exposicion: Variable binaria que describe la perturbación física combinada del sedimento del fondo marino, resultante de la acción conjunta de mareas, oleaje y corrientes inducidas por el viento (0 = baja / 1 = alta).
+- sustrato: Categoría dominante del sustrato (3 categorías: arena fina, arena gruesa, grava o cascajos).
+- ciclo_estacional: Clasificación del ciclo estacional (estación cálida, de abril a septiembre / estación fría, de octubre a marzo).
 - profundidad: Profundidad del fondo (m).
-- estacion.1: Clasificación estacional (estación cálida / fría).
 
 Papel en el análisis:
 Utilizado para definir la estructura espacial y temporal del diseño de muestreo y para
@@ -76,16 +76,16 @@ incluye propiedades físicas y granulométricas del fondo marino.
 
 Variables principales:
 - estacion: Identificador de la estación de muestreo.
-- zona: Sector geográfico.
+- zona: Sector geográfico (A Coruña, Ares–Betanzos, Orzán–Riazor).
 - profundidad: Profundidad del fondo (m).
 - Posicion_Sed: Posición de la muestra de sedimento dentro de la estación.
-- pctMO: Porcentaje de materia orgánica.
+- pctMO: Porcentaje de materia orgánica (contenido orgánico total respecto al peso seco de la muestra).
 - pctArenaGruesa: Porcentaje de arena gruesa.
 - pctArenaFina: Porcentaje de arena fina.
-- pctLodo: Porcentaje de lodo.
-- Q50µm: Tamaño medio del grano (micrómetros).
-- Q50phi: Tamaño medio del grano (unidades phi).
-- So: Coeficiente de selección (sorting).
+- pctLodo: Porcentaje de lodo (suma de limos + arcillas, fracción más fina del sedimento).
+- Q50µm: Tamaño medio del grano (micrómetros). Mediana del tamaño de grano expresada en micrómetros
+- Q50phi: Tamaño medio del grano (unidades phi). La misma mediana de tamaño de grano pero transformada a unidades phi 
+- So: Coeficiente de selección (sorting). Cuantifica cuán homogénea es la distribución de tamaños de grano
 
 Papel en el análisis:
 Utilizado como conjunto de predictores ambientales en los modelos de distribución de
