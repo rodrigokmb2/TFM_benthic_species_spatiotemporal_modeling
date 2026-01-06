@@ -13,7 +13,7 @@ datos empleados en los análisis presentados en el Trabajo Fin de Máster:
 Los datos fueron generados en el marco de campañas científicas de arrastre de fondo
 realizadas en el Golfo Ártabro (noroeste de la Península Ibérica) y forman parte de
 proyectos de investigación institucionales coordinados por el Instituto Español de
-Oceanografía (IEO–CSIC), como por ejemplo, el proyecto BIGA (Biodiversidad del Golfo Ártabro).
+Oceanografía (IEO–CSIC), por ejemplo, el proyecto BIGA (Biodiversidad del Golfo Ártabro).
 
 ----------------------------------------------------------------------
 1. datos_lances.csv
